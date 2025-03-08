@@ -651,7 +651,6 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <audio id="hover-sound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
     <nav>
         <button id="nav-toggle"><i class="fas fa-bars"></i></button>
         <ul id="nav-menu">
@@ -859,15 +858,7 @@
             document.getElementById('project-modal').style.display = 'none';
         }
 
-        // Sound Effects
-        const hoverSound = document.getElementById('hover-sound');
-        document.querySelectorAll('nav a, .btn, .project-card, .skill-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                hoverSound.currentTime = 0;
-                hoverSound.play();
-            });
-        });
-
+      
         // Contact Form Email Handling
         document.getElementById('contact-form').addEventListener('submit', e => {
             e.preventDefault();
